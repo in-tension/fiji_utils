@@ -23,14 +23,21 @@ nuc_roi_name = "vl3_nuc-0fiji-utils-testing_150511_Lim3b-GFP_L4-R2.roi"
 nuc_roi_path = os.path.join(script_dir, nuc_roi_name)
 
 
-cell_imp = open_get_imp(cell_imp_path)
-nuc_bin = open_get_imp(nuc_bin_path)
 
-cell_roi = open_get_roi(cell_roi_path)
-nuc_roi = open_get_roi(nuc_roi_path)
-nuc_bin_ip = nuc_bin
-hist = nuc_bin_ip.getHistogram()
-print(hist)
+print(futils.getMeasurementInt())
+
+
+cell_imp = futils.open_get_imp(cell_imp_path)
+nuc_bin = futils.open_get_imp(nuc_bin_path)
+
+cell_roi = futils.open_get_roi(cell_roi_path)
+nuc_roi = futils.open_get_roi(nuc_roi_path)
+
+
+
+#nuc_bin_ip = nuc_bin
+#hist = nuc_bin_ip.getHistogram()
+#print(hist)
 
 #
 #cell_imp = WindowManager.getImage(cell_imp_name)
