@@ -20,6 +20,17 @@ from ij.gui import WaitForUserDialog
 
 from constants import *
 
+# def duplicate(imp,, ze, ) :
+def duplicate_channel(imp, start_slice, end_slice, channel) :
+    d = Duplicator()
+    new_imp = d.run(imp, channel, channel, start_slice, end_slice, 1, 1)
+    return new_imp
+    
+def results_label_to_roi_label(results_label) :
+    parts = results_label.split(':')
+    return parts[1]
+
+
 
 def force_close_all_images() :
     """close all open images without save dialog box"""

@@ -7,6 +7,7 @@ MEAS_INTENS = 2065502
 MEAS_INTENS_XY = 2065534
 
 
+POSS_PRJ_METHODS = ["avg", "min", "max", "sum", "sd", "median"]
 
 GEO_HDINGS = [
     "Area", "Perim.", "X", "Y",

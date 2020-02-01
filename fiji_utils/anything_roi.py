@@ -23,6 +23,7 @@ def setMeasurementInt(i) :
     """sets the measurements setting to the int value i, made as a hack to translate an number to its corresponding checkboxes"""
     a = Analyzer()
     a.setMeasurements(i)
+
 def rt_to_col_dict() :
     """takes the ResultsTable and return its contents as an col_dict(dictionary whose keys are heads of columns and values are the columns)"""
     # print("rt_to_col_dict")
@@ -217,7 +218,7 @@ def meas_rset_geo(roi_set, imp) :
     return measure_roi_set(roi_set, imp, set_measure=MEAS_GEO)
 
 def meas_rset_intens(roi_set, imp) :
-    return measure_roi_set(roi_set, imp, set_measure=MEAS_INTENS)
+    return measure_roi_set(roi_set, imp, set_measure=MEAS_INTENS_XY)
 
 
 def measure_roi_dict(imp, roi_dict, set_measure=MEAS_ALL) :
